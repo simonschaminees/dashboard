@@ -8,9 +8,23 @@ pipeline {
     
       steps {
       echo 'start building'  
-      sh 'npm install'
-      sh 'npm build'  
       }
-    }   
+    }
+    
+    stage("start testing") {
+    
+      steps {
+      echo 'start testing'  
+      }
+    } 
+    
+    stage("deply") {
+    
+      steps {
+      echo 'start deploy'  
+      }
+    } 
+    
+    
   }
 }
