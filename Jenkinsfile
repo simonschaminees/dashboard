@@ -8,7 +8,9 @@ pipeline {
     
       steps {
       echo 'start building'
-      sh 'npm install'
+        nodejs('node-16.14.0'){
+         batch 'npm install' 
+        }
       }
     }
     
