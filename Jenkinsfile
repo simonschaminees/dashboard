@@ -8,12 +8,22 @@ pipeline {
     
       steps {
       echo 'start building'
-          nodejs('node-16.14.0'){
-         batch 'npm install' 
-        }
+      }
+    }
+ 
+    stage("test") {
+    
+      steps {
+      echo 'testing'
       }
     }
     
+    stage("deply") {
+    
+      steps {
+      echo 'deploy'
+      }
+    }    
     
   }
 }
